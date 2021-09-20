@@ -47,17 +47,17 @@ $ yarn test
 
 mutation {
   signup(options:{
-	username: "john",
-	password: "johndoe"
+     username: "john",
+     password: "johndoe"
   }){
   errors {
-  	field
+    field
     message
   }
   user {
     _id
     username
-  	}
+    }
   }
 }
 ```
@@ -91,7 +91,7 @@ mutation {
 #me query - get logged in user.
 
 query {
-	me{
+   me{
     _id
     username
   }
@@ -103,10 +103,10 @@ query {
 
 mutation AddPicture($pictures: [Upload!]!){
   addPicture(
-		tag: ["tech", "computer"],
-		privateImage: false,
-		pictures: $pictures
-	){
+     tag: ["tech", "computer"],
+     privateImage: false,
+     pictures: $pictures
+   ){
     errors{
       field
       message
